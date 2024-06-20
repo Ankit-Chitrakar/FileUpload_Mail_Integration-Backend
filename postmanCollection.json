@@ -1,0 +1,247 @@
+{
+    "info": {
+        "_postman_id": "12345678-1234-1234-1234-123456789012",
+        "name": "File Upload and Mailing API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get Base Route",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:4000/",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        ""
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Upload Image",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "multipart/form-data"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "file",
+                            "type": "file",
+                            "src": "<path_to_your_image_file>"
+                        },
+                        {
+                            "key": "name",
+                            "type": "text",
+                            "value": "Example Image"
+                        },
+                        {
+                            "key": "email",
+                            "type": "text",
+                            "value": "example@example.com"
+                        },
+                        {
+                            "key": "tags",
+                            "type": "text",
+                            "value": "test, upload"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:4000/api/v1/media/upload/image",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "media",
+                        "upload",
+                        "image"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Upload Video",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "multipart/form-data"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "file",
+                            "type": "file",
+                            "src": "<path_to_your_video_file>"
+                        },
+                        {
+                            "key": "name",
+                            "type": "text",
+                            "value": "Example Video"
+                        },
+                        {
+                            "key": "email",
+                            "type": "text",
+                            "value": "example@example.com"
+                        },
+                        {
+                            "key": "tags",
+                            "type": "text",
+                            "value": "test, upload"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:4000/api/v1/media/upload/video",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "media",
+                        "upload",
+                        "video"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Compress and Upload Image",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "multipart/form-data"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "file",
+                            "type": "file",
+                            "src": "<path_to_your_image_file>"
+                        },
+                        {
+                            "key": "name",
+                            "type": "text",
+                            "value": "Compressed Image"
+                        },
+                        {
+                            "key": "email",
+                            "type": "text",
+                            "value": "example@example.com"
+                        },
+                        {
+                            "key": "tags",
+                            "type": "text",
+                            "value": "test, upload"
+                        },
+                        {
+                            "key": "compress",
+                            "type": "text",
+                            "value": "80"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:4000/api/v1/media/upload/image/compress",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "media",
+                        "upload",
+                        "image",
+                        "compress"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Compress and Upload Video",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "multipart/form-data"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "file",
+                            "type": "file",
+                            "src": "<path_to_your_video_file>"
+                        },
+                        {
+                            "key": "name",
+                            "type": "text",
+                            "value": "Compressed Video"
+                        },
+                        {
+                            "key": "email",
+                            "type": "text",
+                            "value": "example@example.com"
+                        },
+                        {
+                            "key": "tags",
+                            "type": "text",
+                            "value": "test, upload"
+                        },
+                        {
+                            "key": "compress",
+                            "type": "text",
+                            "value": "80"
+                        }
+                    ]
+                },
+                "url": {
+                    "raw": "http://localhost:4000/api/v1/media/upload/video/compress",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "4000",
+                    "path": [
+                        "api",
+                        "v1",
+                        "media",
+                        "upload",
+                        "video",
+                        "compress"
+                    ]
+                }
+            }
+        }
+    ]
+}
